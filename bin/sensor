@@ -1,0 +1,188 @@
+#!/usr/bin/env bash
+source $HOME/pysensor/bin/config.shlib;
+EDITOR="$(config_get EDITOR)";
+PORT="$(config_get PORT)";
+
+usage(){
+  echo "Usage: $(basename "$0") [-s|-e] [options]"
+  echo "Try 'sensor help' for more information."
+}
+
+help_(){
+  cat << helpmsg
+Usage: $(basename "$0") [-s|-e|misc] [options]
+  $(basename "$0") status sql Check connection to MySQL server 
+
+Options:
+    -h, help Show this message again
+
+  -s, status Show status of pysensor functions, with options as below
+      sheets Connect to Google Sheets and retrieve time of last record
+         csv Time of last record in local CSV backup
+      serial Connect to sensor and retrieves sensor information
+        cron CRON service status
+     -a, all Show status of all of the above
+
+    -e, edit Edit various pysensor scripts, with options as below
+        main main pysensor script
+      status status functions of pysensor
+         csv last CSV backup file
+        cron cron jobs of pysensor
+        bash bash file that controls the 'sensor' command
+      logger module that contains logging config
+
+        Misc Miscellaneous one word options
+       start Starts CRON service (enables program)
+        stop Stops CRON service (disables program)
+
+     readlog 
+          -n View last n lines of logger
+         all View all lines of logger
+
+        mail View mail queue
+        path View current path of pysensor
+
+helpmsg
+}
+
+statusopts(){
+  cd ~/pysensor/
+  if [[ "$1" == "all" ]]||[[ "$1" == "-a" ]]; then
+    python -c"from status import pysensor_status; pysensor_status('${PORT}')"
+  elif [[ "$1" == "sheets" ]]; then
+    python -c'from status import sheetcheck; sheetcheck()'
+  elif [[ "$1" == "csv" ]]; then
+    python -c'from status import csvcheck; csvcheck()'
+  elif [[ "$1" == "serial" ]]; then 
+    python -c"from status import sensorcheck; sensorcheck('${PORT}')"
+  elif [[ "$1" == "cron" ]]; then
+    python -c'from status import croncheck; croncheck()'
+  else
+    echo "status: missing operand"
+    usage
+  fi
+}
+
+edit(){
+  if [[ "$1" == "main" ]]; then
+    "${EDITOR}" $HOME/pysensor/driver.py
+  elif [[ "$1" == "status"  ]]; then
+    "${EDITOR}" $HOME/pysensor/status.py
+  elif [[ "$1" == "logger" ]]; then
+    "${EDITOR}" $HOME/pysensor/logger.py
+  elif [[ "$1" == "csv"  ]]; then
+    cd $HOME/pysensor/backup
+    "${EDITOR}" "$(ls -d -t $PWD/*.csv | head -n1)"
+  elif [[ "$1" == "cron"  ]]; then
+    crontab -e
+  elif [[ "$1" == "bash"  ]]; then
+    "${EDITOR}" $HOME/pysensor/bin/sensor
+  elif [[ "$1" == "config" ]]; then
+    "${EDITOR}" $HOME/pysensor/pysensor.conf
+  else
+    echo "edit: missing operand"
+    usage
+  fi
+}
+
+confirm(){
+  read -p "This will $1 the CRON jobs of the sensor program. Do you want to proceed?[Y/n]" yn
+  case ${yn:0:1} in 
+    y|Y)
+      echo Yes
+      ;;
+    *)
+      echo No
+      ;;
+  esac
+}
+
+mail(){
+  MAILPATH=/var/mail/sweejy
+  if [[ -f "$MAILPATH" ]]; then
+    cat "$MAILPATH"
+  else
+    echo "You have no new mail."
+  fi
+}
+
+if [[ $# -eq 0 ]]; then
+  usage
+fi
+
+readlog(){
+  LOGPATH=$HOME/pysensor/log/pysensor.log
+  if [[ "$1" =~ ^-[0-9] ]]; then  
+    echo "-- Last$1 lines from pysensor.log --"
+    tail "$1" "$LOGPATH"
+  elif [[ "$1" == "all" ]]; then
+    cat "$LOGPATH"
+  else
+    echo "readlog: missing operand '-n'"
+    usage
+  fi
+}
+
+config(){
+  CONFIGPATH=$HOME/pysensor/pysensor.conf
+  "${EDITOR}" $CONFIGPATH
+}
+
+# Manual options parser
+
+while [[ -n "$1" ]]; do
+    case $1 in
+      -s|status)
+        shift
+        statusopts "$1" 
+        ;;
+      -e|edit)   
+        shift
+        edit "$1"
+        ;;
+      config)
+        config
+        exit
+        ;;
+      mail)   
+        mail
+        exit
+        ;;
+      readlog)
+        shift
+        readlog "$1"
+        ;;
+      path)
+        echo $(find $(pwd) -name pysensor)
+        exit
+        ;;
+      start)
+        if [[ "$(confirm "start")" == "Yes" ]]; then
+          sudo systemctl start cron
+          python -c'from pysensor.status import croncheck; croncheck()'
+        else
+          echo "Did not proceed."
+        fi
+        exit
+        ;;
+      stop)
+        if [[ "$(confirm "stop")" == "Yes" ]]; then
+          sudo systemctl stop cron
+          python -c'from pysensor.status import croncheck; croncheck()'
+        else
+          echo "Did not proceed."
+        fi
+        exit
+        ;;
+      -h|help)   
+        help_
+        exit
+        ;;
+      *)              
+        usage
+        exit 1
+        ;;
+    esac
+    shift
+done
+

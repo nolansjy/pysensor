@@ -1,0 +1,244 @@
+Aug 25 16:50:15 testlog: test
+Aug 25 16:50:15 testlog: another message
+Aug 25 16:50:15 testlog: another one
+Aug 28 11:40:50 logger: SQL server connected.
+Aug 28 13:35:26 status sqlcheck: SQL server connected.
+Aug 28 15:49:55 status sensorcheck: Serial connection is UP.
+Aug 28 15:49:55 logging debug: Current transaction state - IDLE
+Aug 28 15:49:55 logging debug: Running transaction 1
+Aug 28 15:49:55 logging debug: SEND: 0x1 0x3 0x26 0x48 0x0 0x1b 0x8e 0x9f
+Aug 28 15:49:55 logging debug: New Transaction state "SENDING"
+Aug 28 15:49:55 logging debug: Changing transaction state from "SENDING" to "WAITING FOR REPLY"
+Aug 28 15:49:55 logging debug: Changing transaction state from "WAITING FOR REPLY" to "PROCESSING REPLY"
+Aug 28 15:49:55 logging debug: RECV: 0x1 0x3 0x36 0x0 0x50 0x0 0x4d 0x0 0x43 0x0 0x2d 0x0 0x44 0x0 0x37 0x0 0x32 0x0 0x36 0x0 0x4d 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x27 0x17 0x0 0xe 0x7 0xe1 0x0 0x6 0x0 0xf 0xa7 0x6e 0x76 0x42 0x52 0x34
+Aug 28 15:49:55 logging debug: Processing: 0x1 0x3 0x36 0x0 0x50 0x0 0x4d 0x0 0x43 0x0 0x2d 0x0 0x44 0x0 0x37 0x0 0x32 0x0 0x36 0x0 0x4d 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x27 0x17 0x0 0xe 0x7 0xe1 0x0 0x6 0x0 0xf 0xa7 0x6e 0x76 0x42 0x52 0x34
+Aug 28 15:49:55 logging debug: Getting Frame - 0x3 0x36 0x0 0x50 0x0 0x4d 0x0 0x43 0x0 0x2d 0x0 0x44 0x0 0x37 0x0 0x32 0x0 0x36 0x0 0x4d 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x27 0x17 0x0 0xe 0x7 0xe1 0x0 0x6 0x0 0xf 0xa7 0x6e 0x76 0x42
+Aug 28 15:49:55 logging debug: Factory Response[ReadHoldingRegistersResponse': 3]
+Aug 28 15:49:55 logging debug: Frame advanced, resetting header!!
+Aug 28 15:49:55 logging debug: Adding transaction 1
+Aug 28 15:49:55 logging debug: Getting transaction 1
+Aug 28 15:49:55 logging debug: Changing transaction state from "PROCESSING REPLY" to "TRANSACTION_COMPLETE"
+Aug 28 15:54:46 status sensorcheck: Serial connection is UP.
+Aug 28 16:00:27 status sensorcheck: Serial connection is UP.
+Aug 28 16:06:01 logging debug: Current transaction state - IDLE
+Aug 28 16:06:01 logging debug: Running transaction 1
+Aug 28 16:06:01 logging debug: SEND: 0x1 0x3 0x26 0x48 0x0 0x1b 0x8e 0x9f
+Aug 28 16:06:01 logging debug: New Transaction state "SENDING"
+Aug 28 16:06:01 logging debug: Changing transaction state from "SENDING" to "WAITING FOR REPLY"
+Aug 28 16:06:01 logging debug: Changing transaction state from "WAITING FOR REPLY" to "PROCESSING REPLY"
+Aug 28 16:06:01 logging debug: RECV: 0x1 0x3 0x36 0x0 0x50 0x0 0x4d 0x0 0x43 0x0 0x2d 0x0 0x44 0x0 0x37 0x0 0x32 0x0 0x36 0x0 0x4d 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x27 0x17 0x0 0xe 0x7 0xe1 0x0 0x6 0x0 0xf 0xa7 0x6e 0x76 0x42 0x52 0x34
+Aug 28 16:06:01 logging debug: Processing: 0x1 0x3 0x36 0x0 0x50 0x0 0x4d 0x0 0x43 0x0 0x2d 0x0 0x44 0x0 0x37 0x0 0x32 0x0 0x36 0x0 0x4d 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x27 0x17 0x0 0xe 0x7 0xe1 0x0 0x6 0x0 0xf 0xa7 0x6e 0x76 0x42 0x52 0x34
+Aug 28 16:06:01 logging debug: Getting Frame - 0x3 0x36 0x0 0x50 0x0 0x4d 0x0 0x43 0x0 0x2d 0x0 0x44 0x0 0x37 0x0 0x32 0x0 0x36 0x0 0x4d 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x0 0x20 0x27 0x17 0x0 0xe 0x7 0xe1 0x0 0x6 0x0 0xf 0xa7 0x6e 0x76 0x42
+Aug 28 16:06:01 logging debug: Factory Response[ReadHoldingRegistersResponse': 3]
+Aug 28 16:06:01 logging debug: Frame advanced, resetting header!!
+Aug 28 16:06:01 logging debug: Adding transaction 1
+Aug 28 16:06:01 logging debug: Getting transaction 1
+Aug 28 16:06:01 logging debug: Changing transaction state from "PROCESSING REPLY" to "TRANSACTION_COMPLETE"
+Aug 28 16:16:17 <stdin> <module>: Test
+Aug 28 16:21:39 sqlcleanup main: Connected.
+Aug 28 16:21:54 sqlcleanup main: Connected.
+Aug 28 16:21:54 sqlcleanup affected: Cleaned up SQL server (0 rows deleted)
+Aug 28 16:25:04 pysensor main: Connected to MySQL server.
+Aug 28 16:30:03 pysensor main: Connected to MySQL server.
+Aug 28 16:35:04 pysensor main: Connected to MySQL server.
+Aug 29 00:00:01 csvcleanup main: Deleted 2023-07-29
+Aug 29 00:00:02 sqlcleanup main: Connected.
+Aug 29 08:18:45 sqlcleanup main: Connected.
+Aug 29 08:18:45 sqlcleanup rows_affected: Cleaned up SQL server (0 rows deleted)
+Aug 29 08:29:20 sqlcleanup main: Connected.
+Aug 29 08:29:20 sqlcleanup rows_affected: Cleaned up SQL server (4 rows deleted)
+Aug 30 00:00:01 csvcleanup main: Deleted 2023-07-30
+Aug 30 00:00:02 sqlcleanup main: Connected.
+Aug 30 00:00:02 sqlcleanup rows_affected: Cleaned up SQL server (0 rows deleted)
+Aug 30 10:12:18 sqlcleanup main: Connected.
+Aug 30 10:12:18 sqlcleanup rows_affected: Cleaned up SQL server (285 rows deleted)
+Aug 31 00:00:02 csvcleanup main: Deleted 2023-07-31
+Aug 31 00:00:02 sqlcleanup main: Connected.
+Aug 31 00:00:02 sqlcleanup rows_affected: Cleaned up SQL server (0 rows deleted)
+Sep 01 00:00:01 csvcleanup main: Deleted 2023-08-01
+Sep 01 00:00:02 sqlcleanup main: Connected.
+Sep 01 00:00:02 sqlcleanup rows_affected: Cleaned up SQL server (287 rows deleted)
+Sep 02 00:00:02 csvcleanup main: Deleted 2023-08-02
+Sep 02 00:00:03 sqlcleanup main: Connected.
+Sep 02 00:00:03 sqlcleanup rows_affected: Cleaned up SQL server (283 rows deleted)
+Sep 03 00:00:01 csvcleanup main: Deleted 2023-08-03
+Sep 03 00:00:02 sqlcleanup main: Connected.
+Sep 03 00:00:02 sqlcleanup rows_affected: Cleaned up SQL server (276 rows deleted)
+Sep 04 00:00:02 csvcleanup main: Deleted 2023-08-04
+Sep 04 00:00:03 sqlcleanup main: Connected.
+Sep 04 00:00:03 sqlcleanup rows_affected: Cleaned up SQL server (217 rows deleted)
+Sep 05 00:00:02 csvcleanup main: Deleted 2023-08-05
+Sep 05 00:00:02 sqlcleanup main: Connected.
+Sep 05 00:00:03 sqlcleanup rows_affected: Cleaned up SQL server (72 rows deleted)
+Sep 06 00:00:01 csvcleanup main: Deleted 2023-08-06
+Sep 06 00:00:02 sqlcleanup main: Connected.
+Sep 06 00:00:02 sqlcleanup rows_affected: Cleaned up SQL server (288 rows deleted)
+Sep 06 17:06:22 status sensorcheck: Received Exception()
+Sep 06 17:09:01 status sensorcheck: Received Exception()
+Sep 06 17:10:07 status sensorcheck: Received Exception()
+Sep 06 17:10:32 status sensorcheck: Received Exception()
+Sep 06 17:11:11 status sensorcheck: Received Exception(AttributeError)
+Sep 06 17:15:38 status sensorcheck: Received Exception(name 'r' is not defined)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/status.py", line 42, in sensorcheck
+    model = ''.join(chr(i) for i in r.registers[:9])
+NameError: name 'r' is not defined
+Sep 06 17:16:39 status sensorcheck: Received Exception(name 'r' is not defined)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/status.py", line 42, in sensorcheck
+    model = ''.join(chr(i) for i in r.registers[:9])
+NameError: name 'r' is not defined
+Sep 06 17:56:06 <stdin> <module>: TEST LOG
+Sep 06 18:30:46 <stdin> <module>: TEST LOG
+Sep 07 00:00:02 csvcleanup main: Deleted 2023-08-07
+Sep 07 00:00:03 sqlcleanup main: Connected.
+Sep 07 00:00:03 sqlcleanup rows_affected: Cleaned up SQL server (288 rows deleted)
+Sep 07 07:00:23 pysensor meter_reader_main: Received Exception(local variable 'cursor' referenced before assignment)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 186, in meter_reader_main
+    serve.main()
+  File "/home/sweejy/pysensor/pysensor.py", line 67, in main
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+Sep 07 15:25:14 pysensor meter_reader_main: Received Exception(local variable 'cursor' referenced before assignment)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 186, in meter_reader_main
+    serve.main()
+  File "/home/sweejy/pysensor/pysensor.py", line 67, in main
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+Sep 07 15:35:14 pysensor meter_reader_main: Received Exception(local variable 'cursor' referenced before assignment)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 186, in meter_reader_main
+    serve.main()
+  File "/home/sweejy/pysensor/pysensor.py", line 67, in main
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+Sep 07 17:20:14 pysensor meter_reader_main: Received Exception(local variable 'cursor' referenced before assignment)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 186, in meter_reader_main
+    serve.main()
+  File "/home/sweejy/pysensor/pysensor.py", line 67, in main
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+Jan 27 11:32:40 pysensor meter_reader_main: Received Exception('ModbusIOException' object is not subscriptable)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 186, in meter_reader_main
+    response = value.read_double_bytes(client)
+  File "/home/sweejy/pysensor/pysensor.py", line 144, in read_double_bytes
+    for package in zip(raw[::2],raw[1::2]):
+TypeError: 'ModbusIOException' object is not subscriptable
+Jan 27 11:38:34 pysensor meter_reader_main: Received Exception('ModbusIOException' object has no attribute 'registers')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 186, in meter_reader_main
+    response = value.read_double_bytes(client)
+  File "/home/sweejy/pysensor/pysensor.py", line 144, in read_double_bytes
+    for package in zip(raw.registers[::2],raw.registers[1::2]):
+AttributeError: 'ModbusIOException' object has no attribute 'registers'
+Jan 27 11:44:49 pysensor meter_reader_main: Received Exception('ModbusIOException' object has no attribute 'registers')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 198, in meter_reader_main
+    response = value.read_double_bytes(client)
+  File "/home/sweejy/pysensor/pysensor.py", line 144, in read_double_bytes
+    for package in zip(raw.registers[::2],raw.registers[1::2]):
+AttributeError: 'ModbusIOException' object has no attribute 'registers'
+Jan 27 11:52:59 pysensor meter_reader_main: Received Exception(name 'BACKUP_FOLDER' is not defined)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 207, in meter_reader_main
+    write = Send(data)
+  File "/home/sweejy/pysensor/pysensor.py", line 40, in __init__
+    self._writefile = self.get_writefile()
+  File "/home/sweejy/pysensor/pysensor.py", line 50, in get_writefile
+    files = sorted(os.listdir(BACKUP_FOLDER), reverse=True)
+NameError: name 'BACKUP_FOLDER' is not defined
+Jan 27 11:55:34 pysensor meter_reader_main: Received Exception([Errno 2] No such file or directory: '2023-09-07.csv')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 207, in meter_reader_main
+    write = Send(data)
+  File "/home/sweejy/pysensor/pysensor.py", line 41, in __init__
+    self._pk_no = self.get_pk_no()
+  File "/home/sweejy/pysensor/pysensor.py", line 58, in get_pk_no
+    with open(self._writefile, 'r') as backupfile:
+FileNotFoundError: [Errno 2] No such file or directory: '2023-09-07.csv'
+Jan 27 11:57:21 pysensor meter_reader_main: Received Exception([Errno 2] No such file or directory: '2023-09-07.csv')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 208, in meter_reader_main
+    write = Send(data)
+  File "/home/sweejy/pysensor/pysensor.py", line 41, in __init__
+    self._pk_no = self.get_pk_no()
+  File "/home/sweejy/pysensor/pysensor.py", line 59, in get_pk_no
+    with open(self._writefile, 'r') as backupfile:
+FileNotFoundError: [Errno 2] No such file or directory: '2023-09-07.csv'
+Jan 27 11:59:44 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 11:59:48 pysensor meter_reader_main: Received Exception(name 'Sheet' is not defined)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 210, in meter_reader_main
+    write.to_cloud()
+  File "/home/sweejy/pysensor/pysensor.py", line 83, in to_cloud
+    backup = Sheet(sheetID)
+NameError: name 'Sheet' is not defined
+Jan 27 12:00:14 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 12:00:15 pysensor meter_reader_main: Received Exception('list' object has no attribute 'get')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 210, in meter_reader_main
+    write.to_cloud()
+  File "/home/sweejy/pysensor/pysensor.py", line 77, in to_cloud
+    sheetID = sheet_exists.get('id')
+AttributeError: 'list' object has no attribute 'get'
+Jan 27 12:00:57 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 12:00:59 pysensor meter_reader_main: Received Exception('list' object has no attribute 'get')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 211, in meter_reader_main
+    write.to_cloud()
+  File "/home/sweejy/pysensor/pysensor.py", line 78, in to_cloud
+    sheetID = sheet_exists.get('id')
+AttributeError: 'list' object has no attribute 'get'
+Jan 27 12:01:49 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 12:01:50 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 12:01:52 pysensor meter_reader_main: Received Exception(Parameter "valueInputOption" value "(11066, '2025-01-27 12:01:49', '246.110', '0.000', '0.000', '82.040', '164.070', '0.000', '0.000', '0.000', '0.000', '0.000', '0.000', '1.000', '1.000', '1.000', '50.070')" is not an allowed value in "['INPUT_VALUE_OPTION_UNSPECIFIED', 'RAW', 'USER_ENTERED']")
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 210, in meter_reader_main
+    write.to_cloud()
+  File "/home/sweejy/pysensor/pysensor.py", line 79, in to_cloud
+    backup.append(self.COLUMN_RANGE, entry)
+  File "/home/sweejy/pysensor/gwrapper.py", line 18, in append
+    res = self.service.spreadsheets().values().append(
+  File "/usr/local/lib/python3.9/dist-packages/googleapiclient/discovery.py", line 1091, in method
+    raise TypeError(
+TypeError: Parameter "valueInputOption" value "(11066, '2025-01-27 12:01:49', '246.110', '0.000', '0.000', '82.040', '164.070', '0.000', '0.000', '0.000', '0.000', '0.000', '0.000', '1.000', '1.000', '1.000', '50.070')" is not an allowed value in "['INPUT_VALUE_OPTION_UNSPECIFIED', 'RAW', 'USER_ENTERED']"
+Jan 27 12:05:12 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 12:05:13 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 12:11:55 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 12:11:56 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:34:02 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:34:03 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:39:01 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:39:05 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:40:19 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:40:20 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:42:59 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:43:03 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:44:35 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 22:44:38 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 23:44:29 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 23:44:33 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 23:44:36 pysensor meter_reader_main: Received Exception('Send' object has no attribute '_pk_no')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 213, in meter_reader_main
+    write.to_local()
+  File "/home/sweejy/pysensor/pysensor.py", line 92, in to_local
+    entry = (self._pk_no, self.timestamp, *self.values)
+AttributeError: 'Send' object has no attribute '_pk_no'
+Jan 27 23:46:00 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 23:46:02 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 23:47:49 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 23:47:52 __init__ autodetect: file_cache is only supported with oauth2client<4.0.0
+Jan 27 23:53:15 pysensor meter_reader_main: Received Exception(name 'false' is not defined)
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/pysensor.py", line 209, in meter_reader_main
+    write.to_cloud()
+  File "/home/sweejy/pysensor/pysensor.py", line 66, in to_cloud
+    folder = Drive(self.DRIVE_FOLDER_ID)
+  File "/home/sweejy/pysensor/gwrapper.py", line 75, in __init__
+    self.service = build('drive', 'v3', credentials=creds, cache_discovery=false)
+NameError: name 'false' is not defined

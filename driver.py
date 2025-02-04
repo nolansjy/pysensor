@@ -146,7 +146,7 @@ class Retrieve:
                 strnum = "{}{}".format(package[0],package[1])
                 num = int(strnum)
                 processed.append(num)
-        
+
         value = [(i/10**self.scale) for i in processed]
         return value
         
@@ -190,7 +190,7 @@ def meter_reader_main(port):
 
         data = []
 
-        for value, config in registermap.items(): 
+        for value, config in registermap.items():
             value = Retrieve(*config)
             if config[1]%2==0: # check if packet has double bytes 
                 response = value.read_double_bytes(client)
@@ -201,12 +201,14 @@ def meter_reader_main(port):
                 data.extend(response)
                 time.sleep(0.1)
 
+
         write = Send(data)
         
         try:
+            raise HttpError
             write.to_cloud()
         except HttpError as error: 
-            print(error)
+            logger.error(error)
         finally:           
             write.to_local()
 

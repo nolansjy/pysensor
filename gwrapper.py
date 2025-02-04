@@ -3,8 +3,8 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from pathlib import Path
 
-SERVICE_ACCOUNT_FILE = Path('~\Documents\Python Projects\pysensor\pysensor-service-creds.json').expanduser()
-#SERVICE_ACCOUNT_FILE = Path('~/pysensor/.pysensor-service-creds.json').expanduser()
+#SERVICE_ACCOUNT_FILE = Path('~\Documents\Python Projects\pysensor\pysensor-service-creds.json').expanduser()
+SERVICE_ACCOUNT_FILE = Path('~/pysensor/.pysensor-service-creds.json').expanduser()
 creds = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE)
 
 class Sheets:

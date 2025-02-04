@@ -158,8 +158,9 @@ while [[ -n "$1" ]]; do
         ;;
       start)
         if [[ "$(confirm "start")" == "Yes" ]]; then
+          cd ~/pysensor/
           sudo systemctl start cron
-          python -c'from pysensor.status import croncheck; croncheck()'
+          python -c'from status import croncheck; croncheck()'
         else
           echo "Did not proceed."
         fi
@@ -167,8 +168,9 @@ while [[ -n "$1" ]]; do
         ;;
       stop)
         if [[ "$(confirm "stop")" == "Yes" ]]; then
+          cd ~/pysensor/
           sudo systemctl stop cron
-          python -c'from pysensor.status import croncheck; croncheck()'
+          python -c'from status import croncheck; croncheck()'
         else
           echo "Did not proceed."
         fi

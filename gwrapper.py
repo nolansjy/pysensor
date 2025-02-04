@@ -80,7 +80,8 @@ class Sheets:
 
     def get_last_row(self):
         next_row = self.append('A1:Q1').get('updates',[]).get('updatedRange',[])
-        last_row_index = int(next_row[-1]) - 1
+        last_row = int(next_row[-1]) - 1
+        print(last_row)
         last_row = self.get_row(last_row_index)
         return last_row
 

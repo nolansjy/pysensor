@@ -205,7 +205,7 @@ def meter_reader_main(port):
         
         try:
             write.to_cloud()
-        except HttpError as error: #better error handling
+        except HttpError as error: 
             print(error)
         finally:           
             write.to_local()

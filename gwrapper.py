@@ -3,7 +3,8 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from pathlib import Path
 
-SERVICE_ACCOUNT_FILE = Path('~/pysensor/.pysensor-service-creds.json').expanduser()
+SERVICE_ACCOUNT_FILE = Path('~\Documents\Python Projects\pysensor\pysensor-service-creds.json').expanduser()
+#SERVICE_ACCOUNT_FILE = Path('~/pysensor/.pysensor-service-creds.json').expanduser()
 creds = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE)
 
 class Sheets:
@@ -68,22 +69,23 @@ class Sheets:
         range=f'{index}:{index}'
         ).execute()
         value = res.get('values',[])
+        
         return value[0]
         
     def get_last_index(self):
         """Specifically used to get the last index number in a column A"""
-        next_row = self.append('A1:Q1').get('updates',[]).get('updatedRange',[])
-        last_row = int(next_row[-1]) - 1
+        next_row = self.append('A1:Q1').get('updates',[]).get('updatedRange',[]).split('!')
+        last_row = int(next_row[1][1::]) - 1
         last_index = self.get_cell(f"A{last_row}")
         
-        return int(last_index)
-
+        return last_index
+        
     def get_last_row(self):
-        next_row = self.append('A1:Q1').get('updates',[]).get('updatedRange',[])
-        last_row = int(next_row[-1]) - 1
-        print(last_row)
-        last_row = self.get_row(last_row_index)
-        return last_row
+        next_row = self.append('A1:Q1').get('updates',[]).get('updatedRange',[]).split('!')
+        last_row = int(next_row[1][1::]) - 1
+        last_row_body = self.get_row(last_row)
+        
+        return last_row_body
 
 
 class Drive:
@@ -142,5 +144,4 @@ class Drive:
         ).execute()
         
         return res.get('files', [])
-        
         

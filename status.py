@@ -78,6 +78,7 @@ def sensorcheck(port):
     sleep(1)
 
 def csvcheck():
+    """Read row from last CSV file"""
     BKPATH = os.path.expanduser('~/pysensor/backup')
     backuplist = sorted(os.listdir(BKPATH))
     lastbackup = backuplist[-1]
@@ -114,6 +115,7 @@ def croncheck():
     sleep(1)
 
 def pysensor_status(port):
+    """Run all status checks"""
     print("Testing connection to sensor...")
     sensorcheck(port)
     print("\nTesting connection to Google Drive...")

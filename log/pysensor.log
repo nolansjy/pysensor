@@ -256,3 +256,12 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.9/dist-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
     return wrapped(*args, **kwargs)
 TypeError: __init__() missing 2 required positional arguments: 'resp' and 'content'
+Feb 05 16:27:39 driver meter_reader_main: Received Exception(__init__() missing 2 required positional arguments: 'resp' and 'content')
+Traceback (most recent call last):
+  File "/home/sweejy/pysensor/driver.py", line 215, in meter_reader_main
+    raise HttpError
+  File "/usr/local/lib/python3.9/dist-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+TypeError: __init__() missing 2 required positional arguments: 'resp' and 'content'
+Feb 05 16:30:31 driver meter_reader_main: <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1Jug_SgK6Wd62mNYakx0HuytKf_cfKMcSeJbnZzkEvDE/values/A1%3AQ1?valueInputOption=USER_ENTERED&alt=json returned "Requested writing within range [Sheet1!A1:Q1], but tried writing to column [R]". Details: "Requested writing within range [Sheet1!A1:Q1], but tried writing to column [R]">
+Feb 05 16:32:43 driver meter_reader_main: <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1THTvHftcf7Jn6s-QeaM8FWtFbgFf5gJ005kCVQJRyds/values/A1%3AR1?valueInputOption=USER_ENTERED&alt=json returned "Requested writing within range [Sheet1!A1:R1], but tried writing to column [S]". Details: "Requested writing within range [Sheet1!A1:R1], but tried writing to column [S]">

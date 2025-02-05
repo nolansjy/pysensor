@@ -29,8 +29,15 @@ class Send:
 
     BACKUP_FOLDER = os.path.expanduser('~/pysensor/backup/')
     DRIVE_FOLDER_ID = '1KeyIGI54eBDYrnC9PzsltUjwaczyEC1_'
-    COLUMN_RANGE = 'A1:Q1'
-    HEADERS = ('PK_no','read_at','u_an','u_bn','u_cn','uln_avg','ull_avg','i_a','i_b','i_c','kw_t','kvar_t','kva_t','pf_a','pf_b','pf_c','freq')
+    COLUMN_RANGE = 'A1:V1'
+    HEADERS = ('PK_no','read_at',
+               'u_an','u_bn','u_cn',
+               'uln_avg','ull_avg',
+               'i_a','i_b','i_c',
+               'kw_t','kvar_t','kva_t',
+               'pf_a','pf_b','pf_c','freq',
+               'kwh_import','kwh_export',
+               'kvarh_import','kvarh_export','kvah')
 
     def __init__(self, values):
         """Group register values, set timestamps and backup information."""
@@ -205,7 +212,6 @@ def meter_reader_main(port):
         write = Send(data)
         
         try:
-            raise HttpError
             write.to_cloud()
         except HttpError as error: 
             logger.error(error)

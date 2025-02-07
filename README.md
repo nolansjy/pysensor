@@ -132,7 +132,7 @@ To use in a module inside the pysensor folder, use `from logger import logger`.
 
 If it is outside the pysensor folder, use `from pysensor.logger import logger`
 
-### sensor command
+## sensor command
 
 This is the help message of the sensor command, which can be obtained with `sensor -h`.
 
@@ -167,3 +167,21 @@ Options:
         mail View mail queue
         path View current path of pysensor
 ```
+
+# Misc
+
+## Changing Raspberry Pi network
+1. `sudo vi /etc/wpa_supplicant/wpa_supplicant.conf` (replace vi with nano/editor of choice)
+2. Add network info in the following format if needed and save
+   ```
+   network={
+    ssid="my_wifi_ssid"
+    psk="my_password_in_plaintext"
+    key_mgmt=WPA-PSK
+   }
+   ```
+3. run `wpa_cli` which opens a command-line interface
+4. enter `reconfigure` which reads the wpa_supplicant.conf again
+5. enter `list_networks` to see that your network is listed
+6. enter `select_network <id>` where <id> is the id of your network as listed (without <>)
+7. (Optional) `select_network` will disable all other networks. To enable a network, use `enable_network <id>`
